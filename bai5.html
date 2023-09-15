@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai5</title>
+</head>
+
+<body>
+    <script>
+
+        let arrNumber = prompt("Nhập chuỗi ký tự: ");
+        let result = daoNguocChuoi(arrNumber);
+        function daoNguocChuoi(chuoi) {
+            let mangTu = chuoi.split(" ");
+            let mangTuDaoNguoc = mangTu.reverse();
+            let result = mangTuDaoNguoc.join(" ");
+            return result;
+        }
+        console.log("Chuỗi đã được đảo ngược các thành phần: " + result);
+
+    </script>
+</body>
+
+</html>

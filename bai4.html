@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai4</title>
+</head>
+
+<body>
+    <script>
+        let arrNumber = prompt("Nhập chuỗi ký tự: ");
+        let result = xoaKyTu(arrNumber);
+
+        function xoaKyTu(arr) {
+            let newArray = "";
+            for (let i = 0; i < arr.length; i++) {
+                if (isNaN(arr[i])) {
+                    newArray += arr[i];
+                }
+            }
+            return newArray;
+        }
+
+
+        console.log("Chuỗi ký tự sau khi xóa số: " + result);
+
+    </script>
+</body>
+
+</html>
