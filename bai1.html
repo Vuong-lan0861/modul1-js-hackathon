@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [];
+
+        for (let i = 0; i < 5; i++) {
+            let input = parseInt(prompt(`Nhập số nguyên thứ ${i + 1}`));
+            numbers.push(input);
+        }
+
+        // Sắp xếp mảng theo thứ tự giảm dần
+        numbers.sort((a, b) => b - a);
+
+        // Tìm số lớn nhất và số duy nhất
+        let maxNumber = numbers[0];
+        let uniqueNumbers = [...new Set(numbers)];
+        console.log("số lớn nhất là:"+ maxNumber);
+
+
+    </script>
+</body>
+
+</html>
