@@ -15,12 +15,33 @@
             let input = parseInt(prompt(`Nhập số nguyên thứ ${i + 1}`));
             numbers.push(input);
         }
-        let primeSum = numbers.reduce((sum, num) => {
-            if (isPrime(num)) {
-                return sum + num;
+        // Hàm kiểm tra xem một số có phải là số nguyên tố hay không
+        function isPrime(number) {
+            if (number <= 1) {
+                return false;
             }
-            return sum;
-        }, 0);
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Hàm tính tổng các số nguyên tố trong một chuỗi
+        function sumOfPrimesInString(numbers) {
+
+            let primeSum = numbers.reduce((sum, number) => {
+                if (isPrime(number)) {
+                    return sum + number;
+                }
+                return sum;
+            }, 0);
+            return primeSum;
+        }
+
+        let result = sumOfPrimesInString(numbers);
+        console.log("Tổng các số nguyên tố trong chuỗi là:", result);
     </script>
 </body>
 
