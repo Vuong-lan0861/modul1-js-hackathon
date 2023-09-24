@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai3</title>
+</head>
+
+<body>
+    
+        <script>
+            let arrIndex = [[1, 2, 4, 5], [0, 3, 6], [0, 6], [1, 5], [2, 4], [3]];
+            let kiemTra = (a, i) => {
+                return arrIndex[i].includes(a)
+                // Phương includes()thức của Arraycác thể hiện xác định xem một mảng có 
+                // bao gồm một giá trị nhất định trong số các mục của nó hay không, 
+                // trả về truehoặc falsekhi thích hợp.
+            }
+            for (let i = 0; i < arrIndex.length; i++) {
+                let traiTim = '';
+                for (let a = 0; a < 8; a++) {
+                    if (kiemTra(a, i)) {
+                        traiTim += '*';
+                    } else {
+                        traiTim += '&nbsp;'
+                    }
+                }
+                document.write(traiTim)
+                document.write('<br>')
+            }
+
+        </script>
+</body>
+
+</html>

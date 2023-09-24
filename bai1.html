@@ -9,20 +9,31 @@
 
 <body>
     <script>
-        let numbers = [];
 
-        for (let i = 0; i < 5; i++) {
-            let input = parseInt(prompt(`Nhập số nguyên thứ ${i + 1}`));
-            numbers.push(input);
+        let newArr1 = [];
+        let numbers = [2, 45, 10, 11, 45, 2, 25, 100, 77, 1, 77, 0, 11];
+        // for (let i = 0; i < 5; i++) {
+        //     let input = parseInt(prompt(`Nhập số nguyên thứ ${i + 1}`));
+        //     numbers.push(input);
+        // }
+
+        let count = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            count = 0;
+            for (let j = 0; j < numbers.length; j++) {
+                if (numbers[i] == numbers[j]) {
+                    count += 1;
+                }
+            }
+            if (count <= 1) {
+                newArr1.push(numbers[i]);
+            }
         }
-
-        // Sắp xếp mảng theo thứ tự giảm dần
-        numbers.sort((a, b) => b - a);
-
-        // Tìm số lớn nhất và số duy nhất
-        let maxNumber = numbers[0];
-        let uniqueNumbers = [...new Set(numbers)];
-        console.log("số lớn nhất là:" + maxNumber);
+        console.log("mảng sau khi đã loại bỏ phần tử trùng nhau là:",newArr1);
+        let newArr2 = newArr1.sort((a, b) => (b - a));
+        let result = newArr2.slice(0,1);
+        console.log("số lớn nhất trong mảng và là số không bị trùng là:",result);
 
 
     </script>
